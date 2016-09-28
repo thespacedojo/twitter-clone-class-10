@@ -5,7 +5,6 @@ babel-runtime@0.1.11
 base64@1.0.9
 binary-heap@1.0.9
 blaze@2.1.9
-blaze-html-templates@1.0.5
 blaze-tools@1.0.10
 boilerplate-generator@1.0.10
 caching-compiler@1.1.7
@@ -23,6 +22,7 @@ ecmascript-runtime@0.3.14
 ejson@1.0.12
 es5-shim@4.6.14
 fastclick@1.0.12
+fortawesome:fontawesome@4.5.0
 geojson-utils@1.0.9
 hot-code-push@1.0.4
 html-tools@1.0.11
@@ -58,11 +58,11 @@ spacebars@1.0.13
 spacebars-compiler@1.0.13
 standard-minifier-css@1.2.1
 standard-minifier-js@1.2.0
-templating@1.2.15
-templating-compiler@1.2.15
-templating-runtime@1.2.15
+static-html@1.1.13
+stylus@2.513.5
 templating-tools@1.0.5
 tracker@1.1.0
+twbs:bootstrap@3.3.6
 ui@1.0.12
 underscore@1.0.9
 url@1.0.10
