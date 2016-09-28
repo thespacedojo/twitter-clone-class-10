@@ -17,16 +17,18 @@ export const TweetStream = () => (
             </div>
 
             <table id="profile-stats" className="table">
-              <tr className="head">
-                <td><strong>Tweets</strong></td>
-                <td><strong>Following</strong></td>
-                <td><strong>Followers</strong></td>
-              </tr>
-              <tr className="numbers">
-                <td>500</td>
-                <td>240</td>
-                <td>1,600</td>
-              </tr>
+              <tbody>
+                <tr className="head">
+                  <td><strong>Tweets</strong></td>
+                  <td><strong>Following</strong></td>
+                  <td><strong>Followers</strong></td>
+                </tr>
+                <tr className="numbers">
+                  <td>500</td>
+                  <td>240</td>
+                  <td>1,600</td>
+                </tr>
+              </tbody>
             </table>
           </div>
 
