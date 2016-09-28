@@ -1,6 +1,6 @@
 import React from 'react';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
-import { TweetStream } from '/imports/ui/components/TweetStream.js';
+import TweetStream from '/imports/ui/containers/TweetStream.js';
 import { Profile } from '/imports/ui/components/Profile.js';
 import { Notifications } from '/imports/ui/components/Notifications.js';
 import AppLayout from '/imports/ui/components/AppLayout.js';

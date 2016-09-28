@@ -14,6 +14,7 @@ caching-html-compiler@1.0.7
 callback-hook@1.0.9
 check@1.2.3
 coffeescript@1.0.17
+dburles:collection-helpers@1.0.4
 ddp@1.2.5
 ddp-client@1.2.9
 ddp-common@1.2.6
@@ -40,6 +41,7 @@ launch-screen@1.0.12
 livedata@1.0.18
 localstorage@1.0.11
 logging@1.1.15
+matb33:collection-hooks@0.8.4
 meteor@1.2.17
 meteor-base@1.0.4
 minifier-css@1.2.14
