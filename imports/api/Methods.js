@@ -6,7 +6,6 @@ Meteor.methods({
   },
   'user/unfollow': function(followId) {
     check(followId, String);
-    console.log(followId);
     if (this.userId)
       Meteor.users.update(this.userId, {$pull: {'profile.followingIds': followId}});
   }

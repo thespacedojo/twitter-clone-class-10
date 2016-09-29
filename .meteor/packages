@@ -27,3 +27,4 @@ std:accounts-bootstrap
 matb33:collection-hooks
 dburles:collection-helpers
 check
+peerlibrary:reactive-publish

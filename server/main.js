@@ -5,4 +5,7 @@ import Methods from '/imports/api/Methods.js';
 
 Meteor.startup(() => {
   // code to run on server at startup
+  Tweets.rawCollection().createIndex({userId: 1}, {background: true}, function() {})
 });
+
+

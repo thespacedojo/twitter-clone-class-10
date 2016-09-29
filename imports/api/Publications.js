@@ -2,8 +2,24 @@ import { Meteor } from 'meteor/meteor';
 import Tweets from '/imports/api/Tweets.js';
 
 Meteor.publish('tweets/timeline', function() {
-  console.log('Subscribed to tweets timeline');
-  return Tweets.find({}, {sort: {tweetAt: 1}});
+  if (!this.userId)
+    return []
+  this.autorun(function() {
+    let cursors = [];
+
+    let user = Meteor.users.findOne(this.userId);
+    let followingIds = [];
+    followingIds.push(user.profile.followingIds);
+    followingIds.push(this.userId);
+    followingIds = _.flatten(followingIds);
+
+    users = Meteor.users.find({_id: {$in: followingIds}}, {fields: {profile: 1, username: 1}});
+    tweets = Tweets.find({userId: {$in: followingIds}}, {sort: {tweetAt: -1}});
+
+    cursors.push(tweets);
+    cursors.push(users);
+    return cursors;
+  });
 })
 
 Meteor.publish('profile/find', function(username) {
