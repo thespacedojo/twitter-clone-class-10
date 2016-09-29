@@ -3,7 +3,7 @@ import React from 'react';
 const Tweet = ({tweet}) => (
   <li className="list-group-item tweet">
 
-    <h5 className="tweet-author"> <span className="author-info"><a href="#">@{tweet.userId} &middot; {tweet.tweetedTime()}</a></span></h5>
+    <h5 className="tweet-author"> <span className="author-info"><a href="#">@{tweet.username()} &middot; {tweet.tweetedTime()}</a></span></h5>
 
     <p className="list-group-item-text">{tweet.tweetText}</p>
 

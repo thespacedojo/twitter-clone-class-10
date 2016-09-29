@@ -23,6 +23,23 @@ Tweets.before.insert(function(userId, doc) {
 })
 
 Tweets.helpers({
+
+  user() {
+    return Meteor.users.findOne({_id: this.userId});
+  }, 
+
+  username() {
+    if (this.user()) {
+      return this.user().username;
+    }
+  },
+
+  fullName() {
+    if (this.user() && this.user().profile) {
+      return this.user().profile.name;
+    } 
+  },
+
   tweetedTime() {
     return moment(this.tweetAt).fromNow();  
   }
