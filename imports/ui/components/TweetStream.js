@@ -2,7 +2,7 @@ import React from 'react';
 import AddTweet from '/imports/ui/components/AddTweet.js';
 import Tweets from '/imports/ui/components/Tweets.js';
 
-export const TweetStream = ({tweets}) => (
+export const TweetStream = ({tweets, currentUser}) => (
   <div id="stream" className="container">
     <div className="row">
       <div className="col-md-4 col-lg-3">
@@ -15,7 +15,7 @@ export const TweetStream = ({tweets}) => (
 
             <div className="media-body">
               <span className="username"><strong>josh owens</strong></span> <br />
-              <span className="handle">@joshowens</span>
+              <span className="handle">@{currentUser.username}</span>
             </div>
 
             <table id="profile-stats" className="table">

@@ -1,5 +1,6 @@
 import React from 'react';
 import Tweets from '/imports/ui/components/Tweets.js';
+import FollowButton from '/imports/ui/components/FollowButton.js';
 
 export const Profile = ({tweets, currentUser, userProfile}) => (
   <div>
@@ -26,7 +27,7 @@ export const Profile = ({tweets, currentUser, userProfile}) => (
         </ul>
 
         <ul className="nav navbar-nav navbar-right">
-          <li className="follow-me"><button className="btn btn-primary"><i className="fa fa-plus"></i>&nbsp; Follow</button></li>
+          <FollowButton followingIds={currentUser.profile.followingIds} userId={userProfile._id} />
         </ul>
 
 
