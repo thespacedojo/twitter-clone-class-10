@@ -1,6 +1,6 @@
 import React from 'react';
 import AddTweet from '/imports/ui/components/AddTweet.js';
-import Tweet from '/imports/ui/components/Tweet.js';
+import Tweets from '/imports/ui/components/Tweets.js';
 
 export const TweetStream = ({tweets}) => (
   <div id="stream" className="container">
@@ -51,23 +51,7 @@ export const TweetStream = ({tweets}) => (
         </div>
       </div>
 
-      <div className="col-md-8 col-lg-6">
-        <ul id="tweet-stream" className="list-group">
-          <li className="list-group-item">
-            <h4 className="list-group-item-heading">Tweets</h4>
-          </li>
-
-          {tweets.map((tweet) => {
-            return <Tweet tweet={tweet} key={tweet._id} />
-          })}
-
-
-          <li className="list-group-item load-more">
-            <a href="#">Load more tweets</a>
-          </li>
-        </ul>
-      </div>
-
+      <Tweets tweets={tweets} header="Tweets"/>
 
 
       <div id="who-to-follow" className="col-md-8 col-md-offset-4 col-lg-3 col-lg-offset-0">
